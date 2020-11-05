@@ -10,11 +10,16 @@ namespace AppStartPerformance {
     class Program {
         const int attempts = 10;
         static void Main(string[] args) {
+            // WinForms
             MeasureStartTime("XtraSpreadsheet w/o ribbon", @"..\..\..\WinSpreadsheetNoRibbon\bin\Release\WinSpreadsheetNoRibbon.exe", attempts);
             MeasureStartTime("XtraSpreadsheet ribbon runtime", @"..\..\..\WinSpreadsheetRibbonRuntime\bin\Release\WinSpreadsheetRibbonRuntime.exe", attempts);
             MeasureStartTime("XtraSpreadsheet ribbon designtime", @"..\..\..\WinSpreadsheetRibbonDesigntime\bin\Release\WinSpreadsheetRibbonDesigntime.exe", attempts);
+            // WPF
+            MeasureStartTime("XpfSpreadsheet w/o ribbon", @"..\..\..\WpfSpreadsheetNoRibbon\bin\Release\WpfSpreadsheetNoRibbon.exe", attempts);
+            MeasureStartTime("XpfSpreadsheet ribbon", @"..\..\..\WpfSpreadsheetRibbon\bin\Release\WpfSpreadsheetRibbon.exe", attempts);
+            
             Console.WriteLine("Done! Press any key to continue...");
-            Console.ReadLine();
+            Console.ReadKey();
         }
 
         static void MeasureStartTime(string name, string appPath, int n) {
@@ -64,10 +69,10 @@ namespace AppStartPerformance {
 
         static void PrintResult(PerfResult result) {
             Console.WriteLine(result.Name);
-            Console.WriteLine("Min:    {0} ms", result.Min);
-            Console.WriteLine("Max:    {0} ms", result.Max);
-            Console.WriteLine("Avg:    {0} ms", result.Mean);
-            Console.WriteLine("Median: {0} ms", result.Median);
+            Console.WriteLine("Min:    {0:F3} ms", result.Min);
+            Console.WriteLine("Max:    {0:F3} ms", result.Max);
+            Console.WriteLine("Avg:    {0:F3} ms", result.Mean);
+            Console.WriteLine("Median: {0:F3} ms", result.Median);
             Console.WriteLine();
         }
     }

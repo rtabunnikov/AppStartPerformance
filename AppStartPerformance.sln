@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinSpreadsheetRibbonRuntime
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinSpreadsheetRibbonDesigntime", "WinSpreadsheetRibbonDesigntime\WinSpreadsheetRibbonDesigntime.csproj", "{BE454183-80E1-4317-9AB3-6CF3805354AB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfSpreadsheetNoRibbon", "WpfSpreadsheetNoRibbon\WpfSpreadsheetNoRibbon.csproj", "{0B86EC88-6CB7-4B84-8BC4-7307D0905100}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfSpreadsheetRibbon", "WpfSpreadsheetRibbon\WpfSpreadsheetRibbon.csproj", "{712AA966-FBC7-4265-A2A2-8EACE356439D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{BE454183-80E1-4317-9AB3-6CF3805354AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE454183-80E1-4317-9AB3-6CF3805354AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE454183-80E1-4317-9AB3-6CF3805354AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B86EC88-6CB7-4B84-8BC4-7307D0905100}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B86EC88-6CB7-4B84-8BC4-7307D0905100}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B86EC88-6CB7-4B84-8BC4-7307D0905100}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B86EC88-6CB7-4B84-8BC4-7307D0905100}.Release|Any CPU.Build.0 = Release|Any CPU
+		{712AA966-FBC7-4265-A2A2-8EACE356439D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{712AA966-FBC7-4265-A2A2-8EACE356439D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{712AA966-FBC7-4265-A2A2-8EACE356439D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{712AA966-FBC7-4265-A2A2-8EACE356439D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
