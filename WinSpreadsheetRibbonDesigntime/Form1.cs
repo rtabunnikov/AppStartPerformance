@@ -15,6 +15,8 @@ namespace WinSpreadsheetRibbonDesigntime {
         }
 
         private void Form1_Shown(object sender, EventArgs e) {
+            Invalidate(true);
+            Update();
             Close();
         }
     }
