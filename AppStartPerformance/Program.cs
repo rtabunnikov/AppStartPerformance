@@ -8,7 +8,7 @@ using System.Threading;
 
 namespace AppStartPerformance {
     class Program {
-        const int attempts = 10;
+        const int attempts = 30;
         static void Main(string[] args) {
             // WinForms
             MeasureStartTime("XtraSpreadsheet w/o ribbon", @"..\..\..\WinSpreadsheetNoRibbon\bin\Release\WinSpreadsheetNoRibbon.exe", attempts);
@@ -40,7 +40,8 @@ namespace AppStartPerformance {
         static TimeSpan MeasureOneRun(string appPath) {
             Stopwatch sw = new Stopwatch();
             sw.Start();
-            var process = Process.Start(appPath);
+            var startInfo = new ProcessStartInfo(appPath) { UseShellExecute = true };
+            var process = Process.Start(startInfo);
             while (!process.WaitForExit(10))
                 Thread.Sleep(50);
             sw.Stop();
