@@ -41,7 +41,8 @@ namespace AppStartPerformance {
             Stopwatch sw = new Stopwatch();
             sw.Start();
             var process = Process.Start(appPath);
-            process.WaitForExit(10000);
+            while (!process.WaitForExit(10))
+                Thread.Sleep(50);
             sw.Stop();
             return sw.Elapsed;
         }
