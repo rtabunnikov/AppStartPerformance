@@ -23,7 +23,8 @@ namespace WpfSpreadsheetRibbon {
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e) {
-            Close();
+            //Close();
+            Dispatcher.BeginInvoke((Action)Close, System.Windows.Threading.DispatcherPriority.ApplicationIdle);
         }
     }
 }

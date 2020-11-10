@@ -11,23 +11,23 @@ namespace AppStartPerformance {
         const int attempts = 5;
 
         static void Main(string[] args) {
-            Thread thread = new Thread(new ThreadStart(KillEval));
-            thread.Start();
-            //// WinForms
-            //MeasureStartTime("XtraSpreadsheet w/o ribbon", @"..\..\..\WinSpreadsheetNoRibbon\bin\Release\WinSpreadsheetNoRibbon.exe", attempts);
-            //MeasureStartTime("XtraSpreadsheet ribbon runtime", @"..\..\..\WinSpreadsheetRibbonRuntime\bin\Release\WinSpreadsheetRibbonRuntime.exe", attempts);
-            //MeasureStartTime("XtraSpreadsheet ribbon designtime", @"..\..\..\WinSpreadsheetRibbonDesigntime\bin\Release\WinSpreadsheetRibbonDesigntime.exe", attempts);
-            //// WPF
-            //MeasureStartTime("XpfSpreadsheet w/o ribbon", @"..\..\..\WpfSpreadsheetNoRibbon\bin\Release\WpfSpreadsheetNoRibbon.exe", attempts);
-            //MeasureStartTime("XpfSpreadsheet ribbon", @"..\..\..\WpfSpreadsheetRibbon\bin\Release\WpfSpreadsheetRibbon.exe", attempts);
+            //Thread thread = new Thread(new ThreadStart(KillEval));
+            //thread.Start();
+            // WinForms
+            MeasureStartTime("XtraSpreadsheet w/o ribbon", @"..\..\..\WinSpreadsheetNoRibbon\bin\Release\WinSpreadsheetNoRibbon.exe", attempts);
+            MeasureStartTime("XtraSpreadsheet ribbon runtime", @"..\..\..\WinSpreadsheetRibbonRuntime\bin\Release\WinSpreadsheetRibbonRuntime.exe", attempts);
+            MeasureStartTime("XtraSpreadsheet ribbon designtime", @"..\..\..\WinSpreadsheetRibbonDesigntime\bin\Release\WinSpreadsheetRibbonDesigntime.exe", attempts);
+            // WPF
+            MeasureStartTime("XpfSpreadsheet w/o ribbon", @"..\..\..\WpfSpreadsheetNoRibbon\bin\Release\WpfSpreadsheetNoRibbon.exe", attempts);
+            MeasureStartTime("XpfSpreadsheet ribbon", @"..\..\..\WpfSpreadsheetRibbon\bin\Release\WpfSpreadsheetRibbon.exe", attempts);
 
-            MeasureStartTime("WinTelerikSpreadsheet w/o ribbon", @"..\..\..\WinTelerikSpreadsheetWithoutRibbon\TelerikSpreadsheetWithoutRibbon\bin\Release\TelerikSpreadsheetWithoutRibbon.exe", attempts);
-            MeasureStartTime("WinTelerikSpreadsheet ribbon designtime", @"..\..\..\WinTelerikSpreadsheetRibbonDesigntime\TelerikSpreadsheetRibbonDesigntime\bin\Release\TelerikSpreadsheetRibbonDesigntime.exe", attempts);
-            MeasureStartTime("WpfTelerikSpreadsheet w/o ribbon", @"..\..\..\WpfTelerikSpreadsheetWithoutRibbon\WpfSpreadsheetWithoutRibbon\bin\Release\WpfSpreadsheetWithoutRibbon.exe", attempts);
-            MeasureStartTime("WpfTelerikSpreadsheet ribbon", @"..\..\..\WpfTelerikSpreadsheetWithRibbon\WpfTelerikSpreadsheetWithRibbon\bin\Release\WpfTelerikSpreadsheetWithRibbon.exe", attempts);
+            //MeasureStartTime("WinTelerikSpreadsheet w/o ribbon", @"..\..\..\WinTelerikSpreadsheetWithoutRibbon\TelerikSpreadsheetWithoutRibbon\bin\Release\TelerikSpreadsheetWithoutRibbon.exe", attempts);
+            //MeasureStartTime("WinTelerikSpreadsheet ribbon designtime", @"..\..\..\WinTelerikSpreadsheetRibbonDesigntime\TelerikSpreadsheetRibbonDesigntime\bin\Release\TelerikSpreadsheetRibbonDesigntime.exe", attempts);
+            //MeasureStartTime("WpfTelerikSpreadsheet w/o ribbon", @"..\..\..\WpfTelerikSpreadsheetWithoutRibbon\WpfSpreadsheetWithoutRibbon\bin\Release\WpfSpreadsheetWithoutRibbon.exe", attempts);
+            //MeasureStartTime("WpfTelerikSpreadsheet ribbon", @"..\..\..\WpfTelerikSpreadsheetWithRibbon\WpfTelerikSpreadsheetWithRibbon\bin\Release\WpfTelerikSpreadsheetWithRibbon.exe", attempts);
             Console.WriteLine("Done! Press any key to continue...");
             Console.ReadKey();
-            thread.Abort();
+            //thread.Abort();
         }
 
         static void KillEval() {
