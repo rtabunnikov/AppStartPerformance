@@ -25,6 +25,15 @@ namespace AppStartPerformance {
             //MeasureStartTime("WinTelerikSpreadsheet ribbon designtime", @"..\..\..\WinTelerikSpreadsheetRibbonDesigntime\TelerikSpreadsheetRibbonDesigntime\bin\Release\TelerikSpreadsheetRibbonDesigntime.exe", attempts);
             //MeasureStartTime("WpfTelerikSpreadsheet w/o ribbon", @"..\..\..\WpfTelerikSpreadsheetWithoutRibbon\WpfSpreadsheetWithoutRibbon\bin\Release\WpfSpreadsheetWithoutRibbon.exe", attempts);
             //MeasureStartTime("WpfTelerikSpreadsheet ribbon", @"..\..\..\WpfTelerikSpreadsheetWithRibbon\WpfTelerikSpreadsheetWithRibbon\bin\Release\WpfTelerikSpreadsheetWithRibbon.exe", attempts);
+
+            //MeasureStartTime("XtraRichEdit w/o ribbon", @"..\..\..\DXRichEditNoRibbon\DXRichEditNoRibbon\bin\Release\DXRichEditNoRibbon.exe", attempts);
+            //MeasureStartTime("XtraRichEdit ribbon runtime", @"..\..\..\DXRichEditRuntime\DXRichEditRuntime\bin\Release\DXRichEditRuntime.exe", attempts);
+            //MeasureStartTime("XtraRichEdit ribbon designtime", @"..\..\..\DXRichEditDesigntime\DXRichEditDesigntime\bin\Release\DXRichEditDesigntime.exe", attempts);
+
+            //MeasureStartTime("Telerik w/o ribbon", @"..\..\..\TelerikRichEditWithoutRibbon\TelerikRichEditWithoutRibbon\bin\Release\TelerikRichEditWithoutRibbon.exe", attempts);
+            //MeasureStartTime("Telerik ribbon runtime", @"..\..\..\TelerikRicheditRibbonRuntime\TelerikRicheditRibbonRuntime\bin\Release\TelerikRicheditRibbonRuntime.exe", attempts);
+            //MeasureStartTime("Telerik ribbon designtime", @"..\..\..\TelerikRichEditRibbonDesigntime\TelerikRichEditRibbonDesigntime\bin\Release\TelerikRichEditRibbonDesigntime.exe", attempts);
+
             Console.WriteLine("Done! Press any key to continue...");
             Console.ReadKey();
             //thread.Abort();
@@ -32,7 +41,7 @@ namespace AppStartPerformance {
 
         static void KillEval() {
             while (true) {
-                var proc = Process.GetProcesses().Where(x => x.MainWindowTitle.Contains("Evaluation"));
+                var proc = Process.GetProcesses().Where(x => x.MainWindowTitle.Contains("Evaluation") || x.MainWindowTitle.Contains("Trial"));
                 foreach (var process in proc) {
                     try {
                         process.CloseMainWindow();
