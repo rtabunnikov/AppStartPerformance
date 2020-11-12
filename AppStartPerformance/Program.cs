@@ -8,7 +8,7 @@ using System.Threading;
 
 namespace AppStartPerformance {
     class Program {
-        const int attempts = 5;
+        const int attempts = 30;
 
         static void Main(string[] args) {
             //Thread thread = new Thread(new ThreadStart(KillEval));

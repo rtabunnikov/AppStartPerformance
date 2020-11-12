@@ -1,0 +1,24 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTelerikRichEditWithoutRibbon"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" x:Class="WpfTelerikRichEditWithoutRibbon.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <Grid x:Name="radRichTextBoxParent">
+            <Grid.Resources>
+                <telerik:IconSources x:Key="IconSources" DarkBasePath="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/Dark/" LightBasePath="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/" ModernBasePath="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/Modern/"/>
+            </Grid.Resources>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <telerik:RadRichTextBox x:Name="radRichTextBox" IsSelectionMiniToolBarEnabled="True" IsSpellCheckingEnabled="True" IsContextMenuEnabled="True" LayoutMode="Paged" Grid.Row="1"/>
+        </Grid>
+
+    </Grid>
+</Window>
